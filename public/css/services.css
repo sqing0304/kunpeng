@@ -1,0 +1,162 @@
+#wrapper{
+	padding-top: 50px;
+}
+#wrapper .banner{
+	display: block;
+	width: 100%;
+}
+#wrapper .banner img{
+	display: block;
+	width: 100%;
+}
+
+#wrapper .common-wrapper{
+	width: 100%;
+	padding: 50px 0;
+	/*border-top: 1px solid #eee;*/
+	border-bottom: 1px solid #eee;
+}
+#wrapper .common-wrapper .head{
+	text-align: center;
+}
+#wrapper .common-wrapper .head .title{
+	display: inline-block;
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .all-wrapper .head .title{
+	font-size: 24px;
+}
+#wrapper .common-wrapper .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #0ba1e4;
+}
+#wrapper .common-wrapper .content{
+	padding: 50px 0;
+}
+#wrapper .common-wrapper .content p{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+}
+#wrapper .all-wrapper .content p{
+	text-align: center;
+}
+
+
+#wrapper .student_insurance{
+	position: relative;
+	width: 100%;
+	background: #fff;
+	padding: 50px 0;
+}
+#wrapper .student_insurance .line {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #0ba1e4;
+    z-index: 1;
+}
+#wrapper .student_insurance .container{
+	position: relative;
+    z-index: 2;
+}
+#wrapper .student_insurance .header{
+	background: #fff;
+}
+#wrapper .student_insurance .header h2{
+	font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+#wrapper .student_insurance .header p{
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+}
+#wrapper .student_insurance .step-wrapper h3{
+	text-align: center;
+	margin: 0;
+	background: #fff;
+}
+#wrapper .student_insurance .step-wrapper h3 img{
+	display: inline-block;
+	width: 20px;
+}
+#wrapper .student_insurance .step-wrapper h4{
+	text-align: center;
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+	padding: 10px 0;
+	background: #fff;
+}
+#wrapper .student_insurance .step-wrapper .list{
+	margin-top: 20px;
+}
+#wrapper .student_insurance .step-wrapper .list .item{
+	background: #f7f7f7;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 0;
+	cursor: pointer;
+}
+@media (min-width: 767px){
+	#wrapper .student_insurance .step-wrapper .list .item{
+		width: 640px;
+	}
+}
+#wrapper .student_insurance .step-wrapper .list .item .index{
+	display: block;
+    width: 10%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    background: #0c0;
+    font-size: 14px;
+    float: left;
+}
+#wrapper .student_insurance .step-wrapper .list .item .text{
+	font-size: 14px;
+    float: left;
+    width: 90%;
+    height: 80px;
+    position: relative;
+}
+#wrapper .student_insurance .step-wrapper .list .item .text span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#wrapper .divider_box{
+	width: 100%;
+	height: 350px;
+	background: url(/images/services/divider_bg_1.jpg) center no-repeat;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}

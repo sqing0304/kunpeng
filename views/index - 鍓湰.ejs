@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+ <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="网站描述" />
+    <!-- Load Normalize.css -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" >
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/index.css" >
+    <link rel="stylesheet" type="text/css" href="/css/flexboxgrid.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/venobox.css" >
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/f18a619225.js"></script>
+    <script src="/js/jquery.serialize-object.min.js" type="text/javascript"></script>
+    <script src="/js/venobox.min.js" type="text/javascript"></script>
+    <script src="/js/app.js"></script>
+    <title>Kunpeng-主页</title>
+    <style type="text/css">
+		.wrapper .banner{
+			width: 100%;
+		}
+		.wrapper .banner img{
+			display: block;
+			width: 100%;
+		}
+		.navbar .logo a img {
+		    width: 115px;
+		    min-width: 95px;
+		    margin-top: -13px;
+		}
+    </style>
+</head>
+<body>
+    <!-- <nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+		      	<a class="navbar-brand" href="#">Brand</a>
+	    	</div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      	<ul class="nav navbar-nav">
+			        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">Link</a></li>
+			        <li class="dropdown">
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">One more separated link</a></li>
+				        </ul>
+			        </li>
+		      	</ul>
+			    <form class="navbar-form navbar-left">
+			        <div class="form-group">
+			          	<input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default">Submit</button>
+			    </form>
+		      	<ul class="nav navbar-nav navbar-right">
+		        	<li><a href="#">Link</a></li>
+			        <li class="dropdown">
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			          	<ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+			          	</ul>
+			        </li>
+		      	</ul>
+	    	</div>
+	  	</div>
+	</nav> -->
+	<div class="navbar index" id="navbar">
+  		<div class="container full-height">
+    		<div class="row middle-sm middle-xs full-height">
+      			<div class="col-sm-2 col-xs-2">
+        			<div class="logo regular ">
+						<a href="/">
+							<img src="/images/kp-logo.jpg" alt="Logo" />
+						</a>       
+					</div>
+			        <div class="logo scrolled">
+						<a href="/">            
+							<img src="/images/kp-logo.jpg" alt="Logo" />
+						</a>        
+					</div>
+      			</div>
+	      		<div class="col-sm-10 col-xs-10">
+	        		<div class="row end-sm end-xs middle-sm middle-xs full-height">
+	          			<div class="col-sm col-xs text-align-right">
+	            			<ul class="horizontal main-nav">
+				              	<li class="">
+				                	<a href="/application<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '留学申请' : 'application'%></a>
+				              	</li>
+				              	<li class="">
+				                	<a href="/apartment<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '学生公寓' : 'apartment'%></a>
+				              	</li>
+				              	<li class="">
+				                	<a href="/services<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '其他服务' : 'services'%></a>
+				              	</li>
+				              	<li class="">
+				                	<a href="/contact<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '联系我们' : 'contact'%></a>
+				              	</li>
+	              				<li>
+					                <div class="dropdown">
+					                  	<a class="dropdown-toggle" data-toggle="dropdown">
+					                    中文 &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i>
+					                  	</a>
+					                  	<ul class="dropdown-menu responsive-navbar-menu dropdown-menu-right">
+						                    <li>
+						                      	<a class="toggle_language_cn" href="javascript:;">中文</a>
+						                    </li>
+						                    <li>
+						                      	<a class="toggle_language_en" href="javascript:;">西班牙</a>
+						                    </li>
+					                  	</ul>
+					                </div>
+					             </li>
+					        </ul>
+				            <div class="dropdown responsive-dropdown">
+					             <a class="dropdown-toggle" data-toggle="dropdown">
+					                <i class="fa fa-bars " aria-hidden="true"></i>
+					             </a>
+					             <ul class="dropdown-menu responsive-navbar-menu dropdown-menu-right">
+					                <li class="">
+					                	<a href="/application<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '留学申请' : 'application'%></a>
+					              	</li>
+					              	<li class="">
+					                	<a href="/apartment<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '学生公寓' : 'apartment'%></a>
+					              	</li>
+					              	<li class="">
+					                	<a href="/services<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '其他服务' : 'services'%></a>
+					              	</li>
+					              	<li class="">
+					                	<a href="/contact<%=lang == 'cn' ? '' : '/en'%>"><%=lang == 'cn' ? '联系我们' : 'contact'%></a>
+					              	</li>
+					             </ul>
+				            </div>
+	            			<!-- <a href="/signup.html" class="btn btn-primary btn-signup ">Get Started</a> -->
+	          			</div>
+	        		</div>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<div class="wrapper">
+		<div class="banner">
+			<img src="/images/banner.jpg" alt="banner" />
+		</div>
+		<div class="container">
+		    <div class="row middle-sm middle-xs padding-top-50 xs-padding-top-25">
+		      	<div class="col-xs-12">
+			        <div class="row center-sm center-xs middle-sm middle-xs">
+			          	<div class="col-sm-2 col-xs-2">
+			            	<i class="fa fa-2x fa-lightbulb-o" aria-hidden="true"></i>
+			          	</div>
+			          	<div class="col-sm-10 col-xs-10">
+				            <h4 class="text-align-left">Learn from your data</h4>
+				            <p class="text-align-left large">
+				              There is a wealth of information hiding in the data in
+				              your database that is just waiting to be discovered.
+				            </p>
+			          	</div>
+			        </div>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	$(function(){
+		$('.toggle_language_cn').on('click', function(){
+			if(window.location.href.indexOf('/en') != -1){
+				window.location.href = window.location.href.replace('/en', '');
+			}
+			// location.href = window.location.href;
+		})
+		$('.toggle_language_en').on('click', function(){
+			if(window.location.href.indexOf('/en') != -1){
+				location.href = window.location.href;
+			}else{
+				location.href = window.location.href + '/en'
+			}
+		})
+	})
+	</script>
+</body>
+</html>

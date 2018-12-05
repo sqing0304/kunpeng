@@ -1,0 +1,353 @@
+#wrapper{
+	padding-top: 61px;
+}
+#wrapper .banner img{
+	display: block;
+	width: 100%;
+}
+/*-------- 关于西班牙 ----------*/
+#wrapper .espana_info{
+	width: 100%;
+	padding: 50px 0;
+}
+#wrapper .espana_info .head{
+	text-align: center;
+}
+#wrapper .espana_info .head .title{
+	display: inline-block;
+	font-size: 24px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .espana_info .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #0ba1e4;
+}
+#wrapper .espana_info .content{
+	padding: 50px 0;
+}
+#wrapper .espana_info .content p{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+}
+
+#wrapper .divider_box_1{
+	width: 100%;
+	height: 350px;
+	background: url(/images/main/divider_bg_1.jpg) center no-repeat;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
+/*-------- 节日 ----------*/
+#wrapper .fiestas{
+	width: 100%;
+	padding: 50px 0;
+}
+#wrapper .fiestas .head{
+	text-align: center;
+}
+#wrapper .fiestas .head .title{
+	display: inline-block;
+	font-size: 24px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .fiestas .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #0ba1e4;
+}
+#wrapper .fiestas .content{
+	padding: 50px 0;
+}
+#wrapper .fiestas .content h4.small_title{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+}
+#wrapper .fiestas .content p{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+}
+#wrapper .fiestas .content .festival_list{
+	width: 100%;
+	margin-top: 40px;
+}
+#wrapper .fiestas .content .festival_list .item{
+	float: left;
+	width: 11.111%;
+}
+#wrapper .fiestas .content .festival_list .item .icon{
+	text-align: center;
+	min-height: 50px;
+	position: relative;
+	margin: 0;
+}
+#wrapper .fiestas .content .festival_list .item .icon img{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	width: 40px;
+}
+#wrapper .fiestas .content .festival_list .item .name{
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+	margin: 0;
+	margin-top: 10px;
+}
+#wrapper .fiestas .content .festival_list .item .date{
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+}
+@media (max-width: 767px){
+	#wrapper .fiestas .content .festival_list .item{
+		float: left;
+		width: 33.333%;
+		margin-bottom: 10px;
+	}
+}
+
+
+#wrapper .divider_box_2{
+	width: 100%;
+	height: 350px;
+	background: url(/images/main/divider_bg_2.jpg) center no-repeat;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
+/*-------- 文化财富 ----------*/
+#wrapper .cultural_wealth{
+	width: 100%;
+	padding: 50px 0;
+	/* background: #0ba1e4; */
+	border-bottom: 1px solid #eee;
+}
+#wrapper .cultural_wealth .head{
+	text-align: center;
+}
+#wrapper .cultural_wealth .head .title{
+	display: inline-block;
+	font-size: 24px;
+	/* color: #fff; */
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .cultural_wealth .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #000;
+}
+#wrapper .cultural_wealth .content{
+	padding: 50px 0;
+}
+#wrapper .cultural_wealth .content p.text{
+	font-size: 14px;
+    line-height: 28px;
+    /* color: #fff; */
+}
+#wrapper .cultural_wealth .content h4.small_title{
+	font-size: 14px;
+    line-height: 28px;
+    /* color: #fff; */
+    font-weight: normal;
+    text-align: center;
+}
+/*-------- 主要城市 ----------*/
+#wrapper .major_city{
+	width: 100%;
+	padding: 50px 0;
+}
+#wrapper .major_city .head{
+	text-align: center;
+}
+#wrapper .major_city .head .title{
+	display: inline-block;
+	font-size: 24px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .major_city .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #0ba1e4;
+}
+#wrapper .major_city .content{
+	padding: 50px 0;
+}
+#wrapper .major_city .content .card-box{
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+#wrapper .major_city .content .card-box .card-area{
+    padding: 0;
+    margin: 0;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+@media (max-width: 767px){
+	.card-area .card-active {
+	    -webkit-transform: scale(1) !important;
+	    -moz-transform: scale(1) !important;
+	    -o-transform: scale(1) !important;
+	    -ms-transform: scale(1) !important;
+	    z-index: 10 !important;
+	}
+	.card-item {
+	    width: 100% !important;
+	}
+}
+
+#wrapper .major_city .content .card-box .card-area .card-item{
+    float: left;
+    position: relative;
+    list-style: none;
+    width: 25%;
+    background-color: #fafafa;
+    border: 1px solid rgba(138,138,138,0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+@media (min-width: 767px){
+	#wrapper .major_city .content .card-box .card-area .card-item:nth-of-type(2){
+		border-left: none;
+		border-right: none;
+	}
+	#wrapper .major_city .content .card-box .card-area .card-item:nth-of-type(3){
+		border-right: none;
+	}
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c1c1c1;
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(138,138,138,0.3);
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-title h4{
+    margin: 0;
+    line-height: 2em;
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-title h4{
+    color: #0ba1e4;
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-content{
+    padding: 20px 10px 30px 10px;
+}
+#wrapper .major_city .content .card-box .card-area .card-item .card-content p{
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #666;
+}
+#wrapper .major_city .content .card-box .card-area .card-active{
+    background-color: #0ba1e4;
+    border: 1px solid #0ba1e4;
+    box-shadow: 0 0 20px 0 rgba(45,183,245,.5);
+    color: #fff;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    z-index: 11;
+}
+#wrapper .major_city .content .card-box .card-area .card-active .card-title h4{
+    color: #fff;
+}
+#wrapper .major_city .content .card-box .card-area .card-active .card-title{
+	border-bottom: 1px solid #fff;
+}
+#wrapper .major_city .content .card-box .card-area .card-active .card-content p{
+	color: #fff
+}
+
+
+#wrapper .divider_box_3{
+	width: 100%;
+	height: 350px;
+	background: url(/images/main/divider_bg_3.jpg) center no-repeat;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
+/*-------- 西班牙高等教育体系 ----------*/
+#wrapper .educatio_system{
+	width: 100%;
+	padding: 50px 0;
+}
+#wrapper .educatio_system .head{
+	text-align: center;
+}
+#wrapper .educatio_system .head .title{
+	display: inline-block;
+	font-size: 24px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+}
+#wrapper .educatio_system .head .line{
+	margin: 30px auto 20px;
+    border-width: 2px;
+    width: 80px;
+    border-top: 1px solid #0ba1e4;
+}
+#wrapper .educatio_system .content{
+	padding: 50px 0;
+}
+#wrapper .educatio_system .content p.text{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+}
+#wrapper .educatio_system .content h4.small_title{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+}
+
+.educatio_system_swiper{
+	/* background: #f9f9f9; */
+	padding: 0 50px 50px 0;
+}
+.educatio_system_swiper .title{
+	text-align: center;
+	font-size: 18px;
+    margin: 0;
+    margin-bottom: 35px;
+    color: #333;
+}
+.educatio_system_swiper p{
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 24px;
+	color: #666;
+}
+

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+ <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="网站描述" />
+    <title>Kunpeng-学生公寓</title>
+    <!-- Load Normalize.css -->
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css" >
+    <link rel="stylesheet" type="text/css" href="/css/apartment_detail.css" >
+    <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css" >
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" >
+	<style>
+		#tablist .list-group-item{
+			cursor: pointer;
+		}
+		.house_bg{
+			padding-top: 60%;
+		}
+		.area,.address{
+			font-size: 12px;
+			color: #666;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		.house_detail{
+			margin-top: 40px;
+		}
+		.house_detail .desc,.house_detail .jiaotong,.house_detail .address,.house_detail .money{
+			border: 2px solid #ddd;
+			border-radius: 5px;
+			padding: 15px;
+			margin-bottom: 20px;
+		}
+		.house_detail .title{
+			font-size: 16px;
+			color: #333;
+		}
+		.house_detail p{
+			font-size: 14px;
+			color: #666;
+			text-indent: 2em;
+		}
+	</style>
+</head>
+<body>
+    
+    <%include nav%>
+	<div id="wrapper">
+		<!--<div class="banner">
+			<img src="/images/apartment/banner.jpg" />
+		</div>-->
+		<div class="container detail-wapper">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="img in houses[index].imges" :style="{backgroundImage: 'url(' + img + ')', backgroundSize: 'cover'}"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="house_detail">
+				<div class="desc">
+					<h4 class="title">房屋描述</h4>
+					<p v-for="desc in houses[index].desc" v-text="desc"></p>
+				</div>
+				<div class="jiaotong">
+					<h4 class="title">交通</h4>
+					<p v-for="jiaotong in houses[index].jiaotong" v-text="jiaotong"></p>
+				</div>
+				<div class="address">
+					<h4 class="title">地理位置</h4>
+					<p v-text="houses[index].where"></p>
+				</div>
+				<div class="money">
+					<h4 class="title">租金</h4>
+					<p v-text="houses[index].money"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-3.4.2.jquery.min.js"></script>
+    <script type="text/javascript" src="/js/Vue.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#tablist .list-group-item').click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		})
+	})
+	</script>
+	<script>
+	    var wrapper = new Vue({
+	    	el: '#wrapper',
+	    	data: {
+	    		houses: <%include house.ejs%>,
+	    		index: <%=index%>
+	    	},
+	    	methods: {
+	    		checkhouse: function(index){
+	    			window.open('/apartment/' + index);
+	    		}
+	    	}
+	    })
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        effect: 'coverflow',
+	        grabCursor: true,
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        coverflow: {
+	            rotate: 50,
+	            stretch: 0,
+	            depth: 100,
+	            modifier: 1,
+	            slideShadows : true
+	        }
+	    });
+    </script>
+</body>
+</html>

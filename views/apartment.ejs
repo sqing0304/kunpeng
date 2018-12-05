@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+ <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="网站描述" />
+    <title>Kunpeng-学生公寓</title>
+    <!-- Load Normalize.css -->
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css" >
+    <link rel="stylesheet" type="text/css" href="/css/apartment.css" >
+    <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css" >
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" >
+	<style>
+		#tablist .list-group-item{
+			cursor: pointer;
+		}
+		.house_bg{
+			padding-top: 60%;
+		}
+		.area,.address{
+			font-size: 12px;
+			color: #666;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+    
+    <%include nav%>
+	<div id="wrapper">
+		<div class="banner">
+			<img src="/images/apartment/banner.jpg" />
+		</div>
+		<div class="container-fluid detail-wapper">
+			<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="45" style="margin-right: 10px;margin-bottom: 4px;" src="/images/apartment/title_1.png" />学生公寓</h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<p class="text">
+		    			鲲鹏教育学生公寓自2013年起开始为广大在西留学生提供优质住宿服务，是西班牙第一家专为留学生需求打造的学生公寓。鲲鹏学生公寓以其独特的管理模式与优良环境为特点，公寓以三室一厅，四室一厅为主，宽敞明亮，交通便利，设施齐全，并配有专业家政打扫服务，租客全为留学生，自由度高，鲲鹏教育设有专人负责公寓管理，及时解决公寓中出现的问题以及给学生提供相应的帮助并且无中介费。现有住房30余套，遍布西班牙马德里大学城周围，为在西留学生提供了学习，生活的空间。
+					</p>
+		    	</div>
+				<!--<div class="row">
+					<div class="col-sm-12 col-md-3">
+						<div class="panel panel-default">
+							 <ul class="list-group" id="tablist">
+								<li class="list-group-item active">学生公寓楼</li>
+								<li class="list-group-item">学生宿舍环境</li>
+								<li class="list-group-item">学生宿舍环境</li>
+								<li class="list-group-item">学生宿舍环境</li>
+								<li class="list-group-item">学生宿舍环境</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-9">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image:url(images/apartment/1.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(images/apartment/2.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(images/apartment/1.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(images/apartment/2.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(images/apartment/1.jpg)"></div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>-->
+		    	<div class="row">
+		    		<div class="col-sm-3" v-for="house in houses">
+			    		<a href="#" class="thumbnail" @click.stop.prevent="checkhouse(house.index)">
+					      <p class="house_bg" :style="{backgroundImage: 'url(' + house.imges[0] + ')', backgroundSize: 'cover'}"></p>
+					      <p class="area" v-text="house.desc[0]"></p>
+					      <p class="address" v-text="house.address"></p>
+					    </a>
+				    </div>
+		    	</div>
+	    	</div>
+		</div>
+	</div>
+	<!-- <div id="footer_nav">
+		<p>Made by @sqing</p>
+	</div> -->
+	
+
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-3.4.2.jquery.min.js"></script>
+    <script type="text/javascript" src="/js/Vue.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#tablist .list-group-item').click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		})
+	})
+	</script>
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        effect: 'coverflow',
+	        grabCursor: true,
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        coverflow: {
+	            rotate: 50,
+	            stretch: 0,
+	            depth: 100,
+	            modifier: 1,
+	            slideShadows : true
+	        }
+	    });
+
+	    var wrapper = new Vue({
+	    	el: '#wrapper',
+	    	data: {
+	    		houses: <%include house.ejs%>,
+	    		activeColor: 'red',
+	    	},
+	    	methods: {
+	    		checkhouse: function(index){
+	    			window.open('/apartment/' + index);
+	    		}
+	    	}
+	    })
+    </script>
+</body>
+</html>

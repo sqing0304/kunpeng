@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>速腾聚创科技有限公司</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta property="qc:admins" content="7713503706325341637570167" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/css/common/reset.css" rel="stylesheet" type="text/css" />  
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+    <link rel="stylesheet" href="/fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/admin/bootstrap-select.min.css">
+    <script src="/js/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-select.min.js"></script>
+    <script src="/js/vue.min.js"></script>
+</head>  
+<body>
+
+    <%include toast%>
+    <div id="main-wrapper" transition="move">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Suteng</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <button type="button" class="btn btn-default pull-right logout" @click="logout">退出</button>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">菜单</h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" @click="showCreateUser">创建人员<i class="fa fa-user-plus pull-right" aria-hidden="true"></i></li>
+                            <li class="list-group-item" @click="showUploadLogo">客户logo<i class="fa fa-cloud-upload pull-right" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">生产系统登录人员列表</div>
+                        <div class="panel-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>用户</th>
+                                        <th>职位</th>
+                                        <th>在职</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="user in users">
+                                        <td>{{user.name}}</td>
+                                        <td>{{user.position}}</td>
+                                        <td>
+                                            <my-switch :permission="user.permission"></my-switch>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  创建人员  -->
+    <div id="createUser" transition="move" v-show="show">
+        <div class="hideCreat" @click="hide"><i class="fa fa-reply"></i></div>
+        <div class="create-wrapper">
+            <h4 class="title">创建人员</h4>
+            <div class="form-horizontal">
+                <input type="text" style="display:none;" autocomplete="off">
+                <div class="form-group">
+                    <select class="selectpicker" data-actions-box="true" v-model="selectedPost">
+                        <option v-for="post in posts" :value="post.type">{{ post.post }}</option>
+                    </select>
+                </div>
+                <div class="form-group" v-show="showProductList">
+                    <select class="selectpicker" multiple data-actions-box="true" v-model="selectedProduct">
+                        <option v-for="(key, value) in steps" :value="key">{{ value }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" autocomplete="off" placeholder="请输入用户名" v-model="username" @keyup.enter="sumbit">
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary form-control" @click="sumbit">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  客户上传  -->
+    <div id="uploadLogo" transition="move" v-show="show">
+        <div class="hideCreat" @click="hide"><i class="fa fa-reply"></i></div>
+        <div class="upload-wrapper">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">客户列表</h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="customer in customers">
+                        <p class="name">{{customer.name}}</p>
+                        <div class="logo">
+                            <img :src="customer.logo" v-if="customer.logo" />
+                            <p v-else>暂无logo</p>
+                        </div>
+                        <span class="uploadlogo">
+                            <i class="fa fa-cloud-upload pull-right" aria-hidden="true" @click="customerlogo(customer.id, $index)"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Logo</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" autocomplete="off" v-model="logourl" placeholder="请输入logo链接">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" :disabled="!logourl" @click="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('my-switch', {
+            template: '<span class="switcher-wrapper" :class="{on: active}"><span class="switcher"></span></span>',
+            props: ['permission'],
+            computed: {
+                active: function(){
+                    return this.permission >= 0;
+                }
+            }
+        });
+        var mainWrapper = new Vue({
+            el: '#main-wrapper',
+            data: {
+                users: ''
+            },
+            created: function(){
+                var _this = this;
+                $.get('/admin/users', function(res){
+                    if(res.code != 0){
+                        toast.showmsg('获取数据失败', true);
+                        return;
+                    }
+                    _this.users = res.users;
+                });
+            },
+            methods: {
+                logout: function(){
+                    location.href = "/admin/logout"
+                },
+                showCreateUser: function(){
+                    createUser.show = true;
+                },
+                showUploadLogo: function(){
+                    uploadLogo.show = true;
+                }
+            }
+        })
+        var createUser = new Vue({
+            el: '#createUser',
+            data: {
+                show: false,
+                posts: [
+                    {
+                        "type": 1,
+                        "post": "CEO" 
+                    },
+                    {
+                        "type": 2,
+                        "post": "COO" 
+                    },
+                    {
+                        "type": 3,
+                        "post": "CTO" 
+                    },
+                    {
+                        "type": 4,
+                        "post": "生产总监"
+                    },
+                    {
+                        "type": 8,
+                        "post": "市场总监"
+                    },
+                    {
+                        "type": 5,
+                        "post": "财务" 
+                    },
+                    {
+                        "type": 6,
+                        "post": "业务经理"
+                    },
+                    {
+                        "type": 7,
+                        "post": "生产人员"
+                    }
+                ],
+                steps: {
+                    "preassemble": "预组装",
+                    "adjreflector": "调小反射镜",
+                    "poireflector": "点小反射镜",
+                    "poiemission": "点发射",
+                    "poireceive": "点接收",
+                    "uvretest": "UV+复测",
+                    "dynbalance": "动平衡",
+                    "assembly": "总装",
+                    "static": "标静态量",
+                    "reflectivity": "标反射率",
+                    "agingtest": "老化测试",
+                    "deliver": "交付市场"
+                },
+                selectedPost: null,
+                selectedProduct: null,
+                username: ''
+            },
+            computed: {
+                showProductList: function(){
+                    return this.selectedPost == '7';
+                }
+            },
+            methods: {
+                hide: function(){
+                    this.show = false;
+                },
+                sumbit: function(){
+                    var _this = this;
+                    if(this.selectedPost == '7'){
+                        if(!this.username || !this.selectedProduct){
+                            toast.showmsg('请完善资料再创建', true);
+                        }
+                    }else{
+                        if(!this.username){
+                            toast.showmsg('用户名不能为空', true);
+                        }
+                    };
+                    for(var i in this.posts){
+                        this.selectedPost = this.selectedPost?this.selectedPost:1;
+                        if(this.selectedPost == this.posts[i].type){
+                            var position = this.posts[i].post;
+                            break;
+                        }
+                    }
+                    var data = {
+                        name: this.username,
+                        type: this.selectedPost?this.selectedPost:1,
+                        position: this.selectedPost == '7'?JSON.stringify(this.selectedProduct):position
+                    };
+                    //  创建人员
+                    $.post('/admin/create', data, function(res){
+                        if(res.code != 0){
+                            toast.showmsg(res.msg, true);
+                            return;
+                        }
+                        mainWrapper.users.push(res.user);
+                        _this.show = false;
+
+                        //  清楚数据
+                        _this.selectedPost = '';
+                        _this.selectedProduct = '';
+                        _this.username = '';
+                    })
+                }
+            }
+        })
+        var uploadLogo = new Vue({
+            el: '#uploadLogo',
+            data: {
+                show: false,
+                customers: ''
+            },
+            methods: {
+                hide: function(){
+                    this.show = false;
+                },
+                customerlogo: function(id, index){
+                    $('#myModal').modal();
+                    myModal.customerId = id;
+                    myModal.customerIndex = index;
+                }
+            },
+            created: function(){
+                var _this = this;
+                $.get('/admin/customers', function(res){
+                    if(res.code != 0){
+                        console.log('获取数据失败');
+                        return;
+                    };
+                    _this.customers = res.customers;
+                });
+            }
+        })
+        var myModal = new Vue({
+            el: '#myModal',
+            data: {
+                logourl: '',
+                customerId: '',
+                customerIndex: ''
+            },
+            methods: {
+                submit: function(){
+                    var _this = this;
+                    $.post('/admin/uploadlogo', {
+                        logourl: logourl,
+                        customerId: customerId
+                    }, function(res){
+                        if(res.code != 0){
+                            toast.showmsg('上传失败', true);
+                            return;
+                        }
+                        $('#myModal').modal('hide');
+                        uploadLogo.customers[_this.customerIndex].logo = _this.logourl;
+                        _this.logourl = '';
+                        _this.customerId = '';
+                        toast.showmsg('成功');
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

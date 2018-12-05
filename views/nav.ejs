@@ -1,0 +1,42 @@
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo" href="/"><img src="/images/kp-logo.jpg" /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/application"><%=lang == 'cn' ? '留学申请' : 'application'%></a></li>
+                <li><a href="/apartment"><%=lang == 'cn' ? '学生公寓' : 'apartment'%></a></li>
+                <li><a href="/services"><%=lang == 'cn' ? '其他服务' : 'services'%></a></li>
+                <li><a href="/contact"><%=lang == 'cn' ? '联系我们' : 'contact'%></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=lang == "cn" ? "中文" : "España"%> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="toggle_language" href="javascript:;"><%=lang == "cn" ? "Español" : "中文"%></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script type="text/javascript">
+    var key = '<%=lang%>';
+    $(function(){
+        $('.toggle_language').click(function(){
+            var url = document.URL;
+            console.log(url);
+            if(key == 'cn'){
+                document.cookie = 'kunpengLang=en';
+            }else{
+                document.cookie = 'kunpengLang=cn';
+            }
+            location.href = url;
+        })
+    })
+</script>

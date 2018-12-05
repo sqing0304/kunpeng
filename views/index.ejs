@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+ <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="网站描述" />
+    <title>Kunpeng-主页</title>
+    <!-- Load Normalize.css -->
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css" >
+    <link rel="stylesheet" type="text/css" href="/css/main.css" >
+    <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css" >
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" >
+    <style type="text/css">
+		.navbar-toggle{
+			margin-top: 15px !important;
+		}
+    </style>
+</head>
+<body>
+    <%include nav%>
+	<div id="wrapper">
+		<div class="banner">
+			<img src="/images/main/banner.jpg" alt="banner" />
+		</div>
+		<div class="container-fluid espana_info">
+	    	<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="40" style="margin-right: 10px;margin-bottom: 6px;" src="/images/main/title.png" /><%=lang == 'cn' ? '关于西班牙' : 'Sobre España'%></h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<p class="text">
+						<%=lang == 'cn' ? '西班牙王国（西班牙语：Reino de España），是位于欧洲西南部的君主立宪制国家，与葡萄牙同处于伊比利亚半岛，东北部与法国及安道尔接壤，国土面积则占伊比利亚半岛的五分之四。其领土还包括地中海中的巴利阿里群岛、大西洋的加那利群岛、以及在非洲北部的休达和梅利利亚。首都兼最大都市为马德里。现今全球有5亿人口使用西班牙语，使西班牙语成为世界上总使用人数第三多，母语人数第二多的语言。' : 'España, también denominado Reino de España, es un país soberano, miembro de la Unión Europea, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la monarquía parlamentaria. Su territorio, con capital en Madrid, está organizado en diecisiete comunidades autónomas y dos ciudades autónomas, formadas estas, a su vez, por cincuenta provincias.Es un país transcontinental que se encuentra situado tanto al sur de Europa Occidental como al norte de África. En Europa ocupa la mayor parte de la península ibérica, conocida como España peninsular, y el archipiélago de las islas Baleares (en el mar Mediterráneo occidental); en África se hallan las ciudades de Ceuta y Melilla, las islas Canarias, las islas Chafarinas (mar Mediterráneo), el peñón de Vélez de la Gomera (mar Mediterráneo), las islas Alhucemas (golfo de las islas Alhucemas), y la isla de Alborán (mar de Alborán).'%><br/>
+						<%=lang == 'cn' ? '西班牙人口约有4700万，国土面积约为505,986.36平方公里。大城市有马德里、巴塞罗那、瓦伦西亚、塞维利亚、萨拉戈萨、毕尔巴鄂等等。西班牙的人均寿命排名居世界前列（82.7岁）。西班牙是一个非宗教国家，其宪法承认宗教信仰自由。但是大部分西班牙人信奉天主教，具有广泛的社会基础。' : 'La población española casi alcanza los 47 millones de habitantes y posee una superficie de 505.986,36 kilómetros cuadrados.'%><br/>
+						<%=lang == 'cn' ? '卡斯蒂利亚语，也称为西班牙语，是官方语言。而加泰罗尼亚语、加里西亚语、巴斯克语、瓦伦西亚语以及巴利阿里群岛本地加泰罗尼亚语分别是所在自治区的官方语言。' : 'El castellano o español es la lengua oficial de la nación. También son oficiales en sus respectivas Comunidades Autónomas el catalán, el gallego, el euskera, el valenciano y la variedad del catalán hablada en las Islas Baleares'%>
+					</p>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="divider_box_1"></div>
+		<div class="container-fluid fiestas">
+	    	<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="45" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_1.png" /><%=lang == 'cn' ? '节日' : 'FIESTAS'%></h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<h4 class="small_title"><%=lang == 'cn' ? '西班牙有着优秀的文化遗产，这可以见于其社会生活的各个领域。全国上下有各种不同的节庆活动留待你去发现。' : 'España destaca por su riqueza multicultural, aspecto que se traslada a todos los ámbitos de la vida social. En este sentido, la diversidad de las manifestaciones festivas se extiende por todo el territorio.'%></h4>
+		    		<p class="text">
+						<%=lang == 'cn' ? '西班牙民间节日庆祝活动和传统常常有明确的宗教起源。这反映在西班牙各地的民俗上，把各种异教节日的纪念活动和宗教狂热结合起来。这个国家的文化多样性意味着从北到南每个区域的节日庆祝形式相差很大，然而与此同时，这些当地节庆活动都在全国各地并存。西班牙新年的庆祝活动以马德里太阳门广场午夜敲响的钟声开始，本地市民以及国内大批游人聚集在这里，随着每一下钟声吞下一颗葡萄，欢迎新年的到来。西班牙传统中其中一个最为重要的节日，是圣周。圣周从三月底或四月开始，各地都会组织生动有趣的民众游行。大多数节庆活动集中在夏季，根据各个地区，在六月至九月期间不等，节庆活动一般都结合了宗教和社会经济方面。西班牙的大部分地区在夏末（八月底和九月初）也有一系列庆祝活动，是纪念收获 （特别是葡萄收获） 的历史传统。国内每个地区都有各自特定的庆祝活动。其中比较突出的是圣费尔明奔牛节、巴塞罗那的潘普洛纳节、圣约尔迪节和梅尔塞节、瓦伦西亚法亚节、格拉纳达的再征服节、塞维利亚的四月游乐会、圣伊斯德罗节和马德里帕洛马圣母狂欢节。但这些仅仅是西班牙一年到头数以千计的节日里面的少数几个例子而已。' : 'Las fiestas populares y las tradiciones españolas tienen un origen inequívocamente religioso. Matiz que se plasma en todas las expresiones del folclore, que combinan el fervor religioso con diversos actos paganos y lúdicos. La diversidad cultural del país propicia que, de norte a sur, las manifestaciones festivas sean muy distintas y, sin embargo, al tiempo convivan con celebraciones comunes en todo el conjunto territorial. El año, en España, se inicia con las tradicionales campanadas de la Puerta del Sol en Madrid, que reúne en la capital y en todos los puntos de la geografía española a miles de personas para celebrar la entrada del año nuevo, acompañando cada campanada con un grano de uva. Sin embargo, una de las celebraciones tradicionales más relevantes en toda España es la Semana Santa. Esta fiesta se celebra a finales de marzo o en abril y destaca por sus coloristas y popularmente sentidas procesiones. Por otra parte, el mayor número de fiestas se celebran durante los meses estivales, desde junio hasta septiembre, según la zona geográfica, ya que se combinan aspectos religiosos y socio-económicos. En gran parte de la geografía española también se celebran distintas fiestas a finales del verano (finales de agosto y principios de septiembre) por la tradición histórica de hacerlas coincidir con la recolección de las cosechas (especialmente la vendimia). Además, cada zona del país tiene sus fiestas específicas. Entre otras, destacan los Sanfermines en Pamplona, Sant Jordi y la Mercé en Barcelona, las Fallas en Valencia, la Fiesta de la Reconquista en Granada, la Feria de Abril en Sevilla o las Fiestas de San Isidro y la Verbena de La Paloma en Madrid. Pero éstas son tan sólo un ejemplo de las miles de celebraciones festivas que se distribuyen por toda la geografía española a lo largo de casi todo el año.'%>
+					</p>
+		    		<h4 class="small_title"><%=lang == 'cn' ? '西班牙法定节日有多个，有些是全国性节日，有些则是地区性或地方性的节日。2017年下列日子被定为全国节日非劳动日：' : 'Para el año 2017, los siguientes días son festivos no laborables en todo el país:'%></h4>
+					<div class="festival_list clearfix">
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/1.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '主显节' : 'Epifanía del Señor'%></p>
+							<span class="date"><%=lang == 'cn' ? '1月6日' : '6 de enero'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/2.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '圣周的周四' : 'Jueves Santo'%></p>
+							<span class="date"><%=lang == 'cn' ? '4月13日' : '13 de abril'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/3.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '圣周五' : 'Viernes Santo'%></p>
+							<span class="date"><%=lang == 'cn' ? '4月14日' : '14 de abril'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/4.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '劳动节' : 'Fiesta del Trabajo'%></p>
+							<span class="date"><%=lang == 'cn' ? '5月1日' : '1 de mayo'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/5.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '圣母升天日' : 'Asunción de la Virgen'%></p>
+							<span class="date"><%=lang == 'cn' ? '8月15日' : '15 de agosto'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/8.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '西班牙国庆节' : 'Fiesta Nacional de España'%></p>
+							<span class="date"><%=lang == 'cn' ? '10月12日' : '12 de octubre'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/6.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '万圣节' : 'Festividad de Todos los Santos'%></p>
+							<span class="date"><%=lang == 'cn' ? '10月31日' : '1 de noviembre'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/7.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '西班牙宪法日' : 'Día de la Constitución Española'%></p>
+							<span class="date"><%=lang == 'cn' ? '12月6日' : '6 de diciembre'%></span>
+						</div>
+						<div class="item">
+							<h4 class="icon"><img src="/images/main/9.png" /></h4>
+							<p class="name"><%=lang == 'cn' ? '圣母受孕节' : 'La Inmaculada Concepción'%></p>
+							<span class="date"><%=lang == 'cn' ? '12月8日' : '8 de diciembre'%></span>
+						</div>
+					</div>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="divider_box_2"></div>
+		<div class="container-fluid cultural_wealth">
+	    	<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="45" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_2.png" /><%=lang == 'cn' ? '文化财富' : 'RIQUEZA CULTURAL'%></h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<h4 class="small_title"><%=lang == 'cn' ? '根植于丰富的历史，西班牙文化在各个时期都有非常重要的意义。' : 'Originada en su rico devenir histórico, la cultura española ha alcanzado un gran protagonismo a lo largo de todos los tiempos.'%></h4>
+		    		<p class="text">
+						<%=lang == 'cn' ? '西班牙是多元文化的代表，是文化马赛克。多样化。新旧共存。小众和大众共存。神圣和亵渎共存。多姿多彩。文化广度极具吸引力。丰富的历史遗产令人眼花缭乱。人民的活力使人著迷。西班牙文化极其丰富，涵盖一切的表达形式。从文学到绘画，从音乐到建筑，从戏剧到奢侈艺术。所有这些，在一个个历史时刻，西班牙文化都达到了艺术巅峰：从古代起（岩画艺术是最显著的例子）直至现代（西班牙建筑处于全球领先地位），西班牙的文化和艺术都占据相当重要的位置。目前西班牙文化发展呈现良好、健康的态势，例如，出版产业蓬勃发展，每年发行超过90,000卷书籍。西班牙有众多博物馆、历史景点、节日和传统，以及各种文化展览，使得文化旅游行业正在逐步替代阳光与海滩旅游业。因此，我们说西班牙在历史文化遗产方面是全球最为丰富的国家之一，不愧被联合国教科文组织称为世界上拥有第二多历史文化遗产的国家。现存超过2万个重要的历史文化遗产。西班牙戏剧和电影正在转变为欧洲的标杆，最为突出的有梅里达（Mérida）、撒古托（Sagunto）或阿尔马格洛（Almagro）戏剧节，以及圣塞巴斯蒂安（San Sebastián）或巴亚多利（Valladolid）电影节。另一方面，西班牙各所大学在传播西班牙文化方面也不遗余力，例如开办各种夏季课程，地点包括埃斯科里亚尔、萨拉曼卡、桑坦德，或是位于桑坦德、巴塞罗那、昆卡、加利西亚、比利牛斯、塞维利亚、特内里菲岛或瓦伦西亚的梅南德斯.佩拉尤国际大学（Universidad Internacional Menéndez Pelayo (UIMP)）。科学和文化研究方面的代表则是国家科学研究理事会。' : 'España es, sobre todo, un mosaico de culturas. Heterogéneas. Antiguas y modernas. Cultas y populares. Sagradas y profanas. Plurales y diversas. La amplitud de sus culturas atrae. El patrimonio histórico deslumbra. Y la fuerza vital de sus gentes fascina. La cultura española es riquísima y abarca todas las formas de expresión.Desde la literatura a la pintura, de la música a la arquitectura, del teatro a la artes suntuarias. En todas ellas, en uno u otro momento histórico, la cultura española ha alcanzado las más altas cimas artísticas: desde la Antigüedad (con notabilísimas muestras de arte rupestre) hasta nuestros días, (en los que la arquitectura española se encuentra en la vanguardia mundial), la cultura y el arte en España han ocupado un puesto relevante. La cultura española actual goza de una buena salud como se manifiesta, por ejemplo, en una boyante industria editorial que mueve más de 90.000 volúmenes anuales. El turismo cultural se está convirtiendo en una alternativa al turismo de sol y playa, dada la riqueza y calidad de sus museos, monumentos, fiestas y tradiciones, así como de exposiciones y manifestaciones culturales diversas. A modo de ejemplo, diremos que España es uno de los países más ricos del mundo en cuanto a patrimonio monumental, no en vano es el segundo país con mayor número de declaraciones de Patrimonio Mundial de la UNESCO. Un inventario aproximado elevaría a más de 20.000 los monumentos de importancia existentes en nuestro país. El teatro y el cine español se está convirtiendo en una referencia en Europa, destacando los Festivales de Teatro de Mérida, Sagunto o Almagro y los Festivales Cinematográficos de San Sebastián o Valladolid. Por su parte, las Universidades españolas juegan un papel muy destacado en la difusión de la cultura nacional, siendo muy importantes en este sentido la celebración de cursos de verano, como los de El Escorial, Salamanca, Santander o la Universidad Internacional Menéndez Pelayo (UIMP), con sede en Santander, Barcelona, Cuenca, Galicia, Pirineos, Sevilla, Tenerife o Valencia. La investigación científica y cultural está representada por el Consejo Superior de Investigaciones Científicas, dependiente del Estado.'%>
+					</p>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="container-fluid major_city">
+	    	<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="25" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_3.png" /><%=lang == 'cn' ? '主要城市' : 'La ciudad de España'%></h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<div class="row">
+			    		<div class="col-sm-12 text-center card-box">
+			                <ul class="card-area clearfix">
+			                    <li class="card-item card-active">
+			                        <div class="card-title">
+			                            <h4><%=lang == 'cn' ? '马德里' : 'Madrid'%></h4>
+			                        </div>
+			                        <div class="card-content">
+			                            <p><%=lang == 'cn' ? '马德里是西班牙的首都，也是拥有现代化设施的国际大都市。作为西班牙经济、金融、行政和服务中心，马德里还拥有无数文化和艺术遗产，这些都是西班牙数千年历史的宝贵遗留。' : 'Madrid, capital de España, es una ciudad cosmopolita que combina las infraestructuras más modernas y su condición de centro económico, financiero, administrativo y de servicios con un inmenso patrimonio cultural y artístico, legado de siglos de historia apasionante.'%></p>
+			                            <p><%=lang == 'cn' ? '马德里的突出特点是其浓重的文化和艺术色彩。马德里有73个博物馆，在人文领域的收罗相当全面。其中最著名的有普拉多博物馆（Museo del Prado）——它是世界上最重要的美术馆之一。还有提森－博内米萨博物馆（Museo Thyssen-Bornemisza）博物馆，那里收藏有800多件画作、雕塑和壁饰，从原始艺术品到先锋作品，无所不包。而索菲娅王后国家艺术中心（Centro Nacional de Arte Reina Sofía）则主要展示西班牙当代艺术，其中有毕加索、米罗、达利和胡安•格里斯等大师的作品。' : 'El arte y la cultura ocupan un lugar destacado en la agenda de Madrid. La capital cuenta con más de 60 museos que abarcan todo el conocimiento humano. Destacan, el Museo del Prado, una de las más importantes pinacotecas del mundo; el Museo Thyssen-Bornemisza, con más de 800 cuadros que abarcan desde los primitivos flamencos hasta los movimientos vanguardistas. Y el Centro Nacional de Arte Reina Sofía, dedicado al arte español contemporáneo, con obras de Picasso, Joan Miró, Salvador Dalí y Juan Gris, entre otros.'%></p>
+			                        </div>
+			                    </li>
+			                    <li class="card-item">
+			                        <div class="card-title">
+			                            <h4><%=lang == 'cn' ? '巴塞罗那' : 'Barcelona'%></h4>
+			                        </div>
+			                        <div class="card-content">
+			                            <p><%=lang == 'cn' ? '巴塞罗那是加泰罗尼亚（Cataluña）的首府，也是一座地中海城市。这座城市的在其规划中融合了罗马风格的痕迹、中世纪风格的城区、极为漂亮的现代主义风格的及20世纪的先驱者的作品，因而成为一座世界性的城市。顺理成章地，国际科技教育文化组织宣布两位加泰罗尼亚建筑师安东尼•高迪和路易斯•多门内奇•蒙塔奈尔建造的标志性建筑为世界人类遗产。' : 'Barcelona, capital de Cataluña, es una ciudad mediterránea y cosmopolita que integra en su trazado urbano restos romanos, barrios medievales y los más bellos ejemplos del Modernismo y las vanguardias del siglo XX. No en vano, la UNESCO ha declarado Patrimonio de la Humanidad construcciones emblemáticas de los arquitectos catalanes Antoni Gaudí y Lluís Doménech i Montaner. '%></p>
+			                        </div>
+			                    </li>
+			                    <li class="card-item">
+			                        <div class="card-title">
+			                            <h4><%=lang == 'cn' ? '塞维利亚' : 'Sevilla '%></h4>
+			                        </div>
+			                        <div class="card-content">
+			                            <p><%=lang == 'cn' ? '塞维利亚位于瓜达尔基维尔河（río Guadalquivir）畔，是阿拉伯人留下来的一份丰富遗产，是同美洲展开贸易的一处重要且繁荣的贸易港口。' : 'es heredera de un rico legado árabe y de su condición de próspero puerto comercial con las Américas. '%></p>
+			                            <p><%=lang == 'cn' ? '作为安达卢西亚省的首府，塞维利亚到处均洋溢着热情和繁荣的景象，显示着其悠久的历史。城中有许多人类文化遗产建筑，还有各种各样具有大众气息和独特风格的街区，如特利亚纳区（Triana）和马卡雷纳区（La Macarena）。' : 'La capital andaluza destila alegría y bullicio en cada una de las calles y plazas que configuran su casco histórico, que alberga un interesante conjunto de construcciones declaradas Patrimonio Mundial y barrios de hondo sabor popular, como el de Triana o La Macarena.'%></p>
+			                        </div>
+			                    </li>
+			                    <li class="card-item">
+			                        <div class="card-title">
+			                            <h4><%=lang == 'cn' ? '瓦伦西亚' : 'Valencia '%></h4>
+			                        </div>
+			                        <div class="card-content">
+										<%if(lang == 'cn'){%>
+			                            <p>瓦伦西亚，可以将上溯至公元138年遥远过去的遗产遗址和新千年建造的最新式和先锋的现代建筑完美和谐地融合在一起</p>
+			                            <p>瓦伦西亚是商业、文化、影视、博物馆、音乐和贸易的集合地。是国际和先锋设计的中心，也是最富魅力的欧洲展销会和各种会议的承办城市之一。</p>
+			                            <p>由于它的地理位置，瓦伦西亚历史上一直充当着西班牙通往地中海的门户的作用，因此它也拥有海洋港口城市的独特魅力。</p>
+			                            <p>此外，细软的沙滩、干净的海水、广阔的海洋和附近的山脉使瓦伦西亚的海滨独具魅力。瓦伦西亚的海滩和沙丘十分有名，海边一派休闲繁华的景象，而城市北边近来也发展出一些度假小城，如拉波布拉、阿尔博拉亚和布依戈等（La Pobla de Farnals， Alboraya y el Puig）。这些地方在几年前还是水产养殖地，现在则成了海边休闲场所。</p>
+										<%}else{%>
+			                            <p>Valencia son capaces de hacer convivir tan armónicamente los restos de su pasado más remoto, datado en el año 138 a. C., con las edificaciones más innovadoras y vanguardistas que se levantan en el nuevo milenio.</p>
+			                            <p>Valencia es comercio y cultura, cine, teatro, museos, música, negocios. Es centro de diseño internacional y de vanguardia, y una de las ciudades más activas en ferias y congresos de Europa.</p>
+										<%}%>
+			                        </div>
+			                    </li>
+			                </ul>
+			                <div class="clearfix"></div>
+			            </div>
+		            </div>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="divider_box_3"></div>
+		<div class="container-fluid educatio_system">
+	    	<div class="container">
+		    	<div class="head">
+		    		<h3 class="title"><img width="40" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_4.png" />西班牙高等教育体系</h3>
+		    		<p class="line"></p>
+		    	</div>
+		    	<div class="content">
+		    		<p class="text">
+		    			根据皇家法令1393/2007在十月二十九日颁布，西班牙高等教育已经纳入欧洲高等教育体系当中，简称EEES，根据教育体系，分为本科，硕士和博士。其中本科与硕士是以修学分为主。<br/>
+		    			全国共有公立大学48所，私立或教会大学18所，在校学生155万（93%在公立大学）[15]。西班牙高等教育历史悠久，早在阿拉伯人统治时期已在科尔多瓦建有高等学府。现存最早的大学是萨拉曼卡大学，始建于1255年。全国有7所学府超过5万学生。<br/>
+						西班牙是世界上较早发展高等教育的国家，主要大学皆起源于欧洲中世纪，且有大学自治的传统。长期以来，西班牙采用的是法国中央集权式高等教育体制，但上世纪七八十年代以来，中央集权制已向自治区(州)分权制转变。除此之外，自1983年起，随着教育体制和学院体制的改革，以自主学习、流动选择与大学自治为基础的多方位改革在西班牙大学教育中实施。与此相应的，大学制订自己的院规、选举自己的自治委员会、评估学院预算和教员，并且建立自己的学位体系和专业，并在“社会委员会”的监督之下进行。近年来随着欧盟一体化进程的推进，西班牙高等教育又面临着新的发展变革。
+					</p>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-"></div>
+			</div>
+		</div>
+		<div class="swiper-container educatio_system_swiper">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<div class="container">
+			        	<h4 class="title"><img width="45" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_7.png" />本科</h4>
+			        	<p>由公立大学颁发的国家教育部认可的国家级文凭，分可以分为如下几个阶段：</p>
+			        	<p>Grado：自2010年新学期起，西班牙大学原有的Diplomatura和Licenciatura等专业除部分特殊专业外都统一实行与欧盟高等教育接轨的新标准四年制本科。</p>
+			        </div>
+		        </div>
+		        <div class="swiper-slide">
+		        	<div class="container">
+						<h4 class="title"><img width="45" style="margin-right: 10px;margin-bottom: 4px;" src="/images/main/title_7.png" />研究生</h4>
+			        	<p>官方硕士（máster universitario）和大学自行颁发的硕士文凭（TÍTULO PROPIO）这类课程文凭一般隶属于各大学的博士研究生院或继续教育学院。这类课程的设置是根据社会对人才的需要开办的，侧重于实用性及实践效果，主要培训各行业的经营、管理、技术型的人才，所修的理论实用性和灵活性强，并且都涵盖了去公司实地观察实习的学习项目，一般是在完成Diplomatura，Licenciatura 或 Grado学习后针对侧重职业生涯培养的再学习，有如下几种课程： Máster：通常在60个学分以上</p>
+			        </div>
+		        </div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<!-- <div id="footer_nav">
+		<p>Made by @sqing</p>
+	</div> -->
+	
+
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		if($(document).width() > 767){
+			$('.card-area .card-item').height($('.card-area').height());
+		}
+		$('.card-item').each(function () {
+            $(this).mouseover(function () {
+                $(this).addClass('card-active');
+                $(this).siblings().removeClass('card-active');
+            });
+        });
+        //swiper
+        var mySwiper = new Swiper ('.swiper-container', {
+		    loop: true,
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    autoplay: 3000
+		}) 
+
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>谁去拿外卖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		*{margin:0;padding: 0}
+		.randomBox{
+			width: 94%;
+			max-width: 640px;
+			min-height: 400px;
+			border: 5px solid #ccc;
+			margin: 20px auto;
+			border-radius: 6px;
+		}
+		.randomBox .num{
+			background-color: #eee;
+			text-align: center;
+			line-height: 30px;
+			height: 30px;
+			margin: 10px;
+		}
+		#btn{
+			display: block;
+			width: 120px;
+			height: 40px;
+			background-color: #e72420;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			margin: 50px auto;
+			cursor: pointer;
+			border-radius: 6px;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="btn">公平公正</a>
+	<div class="randomBox" id="randomBox"></div>
+
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBtn = document.getElementById('btn');
+			var randomBox = document.getElementById('randomBox');
+			var aP = randomBox.getElementsByTagName(p);
+			var len = aP.length;
+			var nums = [];
+			oBtn.onclick = function(){
+				var num = parseInt(100 * Math.random());
+				randomBox.innerHTML += '<p class="num">'+ num +'</p>';
+				for(var i =0;i<len;i++){
+					nums.push(aP[i].innerHTML);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

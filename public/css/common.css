@@ -1,0 +1,294 @@
+@font-face { 
+    font-family: 'Robosense';
+    src: url('http://7xiljm.com1.z0.glb.clouddn.com/HanHei-SC-thin.woff');
+}
+@font-face { 
+    font-family: 'Robosense txt';
+    src: url('http://7xiljm.com1.z0.glb.clouddn.com/HanHei-SC-text.woff');
+}
+@font-face { 
+    font-family: 'Robosense app';
+    src: url('http://7xiljm.com1.z0.glb.clouddn.com/appleicons_text.woff');
+} 
+@font-face { 
+    font-family: 'Robosense myriad';
+    src: url('http://7xiljm.com1.z0.glb.clouddn.com/myriad-set-pro_bold.woff');
+} 
+@font-face {
+    font-family: "zhanghaishan";
+    /* src: url('http://qncdn.sz-sti.com/%E5%BC%A0%E6%B5%B7%E5%B1%B1%E9%94%90%E8%B0%90%E4%BD%93.ttf'); */
+    src: url('http://qncdn.sz-sti.com/zhanghaishan.woff');
+}
+@font-face {
+    font-family: 'minizhongyi';
+    src: url('http://qncdn.sz-sti.com/minizhongyi.woff');
+}
+/*--------------common---------------*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,fieldset, lengend, button, input, textarea,th, td,img {margin: 0;padding: 0;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);zoom:1;}
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+small { font-size: 12px; }
+ul, ol { list-style: none; }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+abbr[title], acronym[title] {border-bottom: 1px dotted;cursor: help;}
+q:before, q:after { content: ''; }
+legend { color: #000; }
+fieldset, img { border: none; }
+button, input, select, textarea {font-size: 100%; }
+table {border-collapse: collapse;border-spacing: 0;}
+hr {border: none;height: 1px;}
+input{-webkit-appearance: none;}
+body {font-family:'Robosense app',"PingFang SC",Helvetica,Arial,"微软雅黑","Alright Sans LP","Avenir Next","Helvetica Neue","Source Han Sans SC","Hiragino Sans GB","WenQuanYi MicroHei",sans-serif !important;
+    /*letter-spacing: 1.5px;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-weight: 350;
+}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+.mb_20{margin-bottom: 20px;}
+.mb_80{margin-bottom: 80px;}
+.mb_100{margin-bottom: 100px;}
+/*--------------------topNav----------------------*/
+#navtop{position: fixed;left: 0;top: 0;width: 100%;height: 159px;z-index: 99;z-index: 9999;transition: all 0.6s;-webkit-transition: all 0.6s;-ms-transition: all 0.6s;-moz-transition: all 0.6s;}
+.black{background: #000;}
+.white{background-color: transparent !important;}
+#nav {margin:0 auto; width:1200px;height: 60px;text-align: center;}
+#nav.borderBot{border-bottom:1px solid rgba(255,255,255,0.5);}
+#nav .logo {float:left;}
+#nav .logo a {display:inline-block;padding-top: 12px;}
+#nav .logo a.nvidia{
+    margin-left: 15px;
+}
+#nav .logo a.nvidia img{
+    display: block;
+    height: 34px; 
+    margin-bottom: 2px;
+}
+#nav .menu{display: inline-block;}
+#nav .menu a{line-height: 60px;padding: 0 18px;color: #fff;font-size: 14px;}
+#nav .menu a.active{color: #df0024;}
+#nav .changeLang{position: relative;}
+#nav .changeLang:after{position: absolute;content: "";width: 0px;right: 0;top: 30px;height:0px;border-width: 5px;border-style: solid;border-color: #fff transparent transparent transparent;}
+#nav .changeLang a{display: block;color: #fff;font-size: 14px;height: 60px;padding-right: 20px;}
+#nav .changeLang a img{padding-top: 17px;}
+
+#langlist{position: absolute;width: 100%;z-index: 9999;}
+#langlist a.lang{cursor: pointer;z-index: 9999;}
+#nav .mainlevel a {text-decoration:none; line-height:32px; display:block; padding:0 20px;color: #fff;line-height: 50px;outline-offset: 0;}
+#header .three-menu{width: 100%;height: 90px;overflow:hidden;background:rgba(0,0,0,0.5);text-align: center;}
+#header .three-menu .link{display:inline-block;cursor: pointer;margin:23px 58px;position:relative;}
+#header .three-menu .button{display:block;width:160px;height:40px;line-height:40px;font-size:14px;color:#fff;-moz-transition:ease 0.4s;-o-transition:ease 0.4s;-webkit-transition:ease 0.4s;transition:ease 0.4s;position:relative;}
+#header .three-menu a.active{color: #df0024;}
+#header .three-menu a.active span{
+    border-bottom: 2px solid #df0024;
+}
+/*--------------------footer----------------------*/
+#footer {width: 100%;height: 270px;color: #cfcdcd;background-color: #000;}
+#footer .nav_list{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #7c7b79;
+}
+#footer .nav_list ul{
+    display: inline-block;
+    padding: 60px 0 30px 0;
+}
+#footer .nav_list ul li{
+    float: left;
+    margin: 0;
+}
+#footer .nav_list ul li a{
+    display: block;
+    border-right: 2px solid #fff;
+    padding: 0 22px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+#footer .nav_list ul li a:hover{
+    color: #df0024;
+}
+#footer .nav_list ul li:first-child a{
+    padding-left: 0; 
+}
+#footer .nav_list ul li:last-child a{
+    border: 0;
+    padding-right: 0; 
+}
+#footer .info-wrap{
+    width: 830px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+#footer .info-wrap .left-wrap{
+    float: left;
+    width: 71%;
+}
+#footer .info-wrap .left-wrap p{
+    padding: 0 0 9px 34px;
+    word-break: break-all;
+    color: #d0d0d0;
+    font-size: 13px;
+}
+#footer .info-wrap .left-wrap p:nth-of-type(1){
+    background: url(http://qncdn.sz-sti.com/images/footer/address.png) 0 2px no-repeat;
+    background-size: 22px;
+}
+#footer .info-wrap .left-wrap p:nth-of-type(2){
+    background: url(http://qncdn.sz-sti.com/images/footer/email.png) 0 2px no-repeat;
+    background-size: 20px;
+}
+#footer .info-wrap .left-wrap p:nth-of-type(3){
+    background: url(http://qncdn.sz-sti.com/images/footer/telphone.png) 0 2px no-repeat;
+    background-size: 20px;
+    line-height: 28px;
+    padding-bottom: 0;
+}
+#footer .info-wrap .right-wrap{
+    float: right;
+    font-size: 0;
+    width: 27%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#footer .info-wrap .right-wrap a{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+#footer .info-wrap .right-wrap img{
+    display: inline-block;
+    width: 80px;
+    border-radius: 4px;
+}
+#footer .info-wrap .right-wrap .facebook{background: url(http://qncdn.sz-sti.com/images/footer/facebook.png) no-repeat;}
+#footer .info-wrap .right-wrap .ins{background: url(http://qncdn.sz-sti.com/images/footer/ins.png) no-repeat;}
+#footer .info-wrap .right-wrap .linkedin{background: url(http://qncdn.sz-sti.com/images/footer/linkedin.png) no-repeat;}
+#footer .info-wrap .right-wrap .twitter{background: url(http://qncdn.sz-sti.com/images/footer/twitter.png) no-repeat;}
+
+#footer .info-wrap .right-wrap .facebook:hover{background: url(http://qncdn.sz-sti.com/images/footer/facebook_hover.png?v=1) no-repeat;}
+#footer .info-wrap .right-wrap .ins:hover{background: url(http://qncdn.sz-sti.com/images/footer/ins_hover.png) no-repeat;}
+#footer .info-wrap .right-wrap .linkedin:hover{background: url(http://qncdn.sz-sti.com/images/footer/linkedin_hover.png?v=1) no-repeat;}
+#footer .info-wrap .right-wrap .twitter:hover{background: url(http://qncdn.sz-sti.com/images/footer/twitter_hover.png) no-repeat;}
+
+
+#footer .w {width: 1000px;margin: 0 auto;height: auto;}
+#footer .cls {clear: both;}
+#footer .cls a{cursor: pointer;}
+#footer .arlist {width: 100px;float: left;margin-right: 60px;margin-top: 40px;}
+#footer a{transition: all 0.6s;-webkit-transition: all 0.6s;-moz-transition: all 0.6s;-ms-transition: all 0.6s;}
+#footer .arlist a:hover,#footer .arlist1 a:hover{color:#e00024;}
+#footer .arlist1 {width: 120px;float: left;margin-right: 60px;margin-top: 40px;}
+#footer .arlist2 {width: 410px;float: left;margin-top: 40px;margin-bottom: 120px;}
+#footer .arlist3 {width: 140px;float: right;margin-top: 75px;}
+#footer .arlist h2,#footer .arlist1 h2, #footer .arlist2 h2 {border-bottom: 2px solid #cfcdcd;font-weight: normal;font-size: 20px;color: #e9e5e5;line-height: 35px;margin-bottom: 15px;}
+#footer .arlist li,#footer .arlist1 li {float: left;width: 100%;line-height: 24px;font-size: 14px;}
+#footer .arlist2 li {max-width: 100%;line-height: 24px;font-size: 14px;padding-left: 28px;word-wrap: break-word;box-sizing: border-box;-webkit-box-sizing: border-box;cursor: pointer;}
+#footer .arlist2 li:nth-of-type(1){background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/address.png) 0 2px no-repeat;background-size: 18px;}
+#footer .arlist2 li:nth-of-type(2){background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/email.png) 0 4px no-repeat;background-size: 18px;}
+#footer .arlist2 li:nth-of-type(3){background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/telphone.png) 0 0px no-repeat;background-size: 18px;}
+#footer .arlist2 .wechat{margin-right: 0 !important;}
+#footer .arlist2 .wechat,#footer .arlist2 .facebook,#footer .arlist2 .ins,#footer .arlist2 .linkedin,#footer .arlist2 .twitter{width: 24px;height: 24px;background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/wechat.png?v=1) no-repeat;position: relative;top: 3px;cursor: pointer;margin-right: 10px;}
+#footer .arlist2 .facebook a,#footer .arlist2 .ins a,#footer .arlist2 .linkedin a,#footer .arlist2 .twitter a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#footer .arlist2 .facebook{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/facebook.png?v=2) no-repeat;}
+#footer .arlist2 .ins{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/ins.png?v=2) no-repeat;}
+#footer .arlist2 .linkedin{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/linkedin.png?v=2) no-repeat;}
+#footer .arlist2 .twitter{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/twitter.png?v=3) no-repeat;}
+
+#footer .arlist2 .wechat:hover,#footer .arlist2 .wechat:link{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/wechat_hover.png) no-repeat;}
+#footer .arlist2 .facebook:hover,#footer .arlist2 .facebook:link{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/facebook_hover.png?v=1) no-repeat;}
+#footer .arlist2 .ins:hover,#footer .arlist2 .ins:link{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/ins_hover.png?v=2) no-repeat;}
+#footer .arlist2 .linkedin:hover,#footer .arlist2 .linkedin:link{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/linkedin_hover.png?v=1) no-repeat;}
+#footer .arlist2 .twitter:hover,#footer .arlist2 .twitter:link{background: url(http://qncdn.sz-sti.com/images/three-dimensional-product/twitter_hover.png?v=2) no-repeat;}
+
+#footer .arlist2 .wechat img{display: block;position: absolute;width: 160px;bottom: 30px;right: 0px;}
+#footer .arlist li a,#footer .arlist1 li a {color: #cfcdcd;}
+#footer .compyright {width: 100%;line-height: 30px;padding: 20px 0;border-top: 1px solid #cfcdcd;clear: both;}
+
+/*---------Font-size---------*/
+.fz_16{font-size: 16px;}
+.fz_18{font-size: 18px;}
+.fz_20{font-size: 20px;}
+.fz_22{font-size: 22px;}
+.fz_24{font-size: 24px;}
+.fz_26{font-size: 26px;}
+.fz_28{font-size: 28px;}
+.fz_30{font-size: 30px;}
+.fz_32{font-size: 32px;}
+.fz_34{font-size: 34px;}
+.fz_36{font-size: 36px;}
+.fz_38{font-size: 38px;}
+.fz_40{font-size: 40px;}
+.fz_42{font-size: 42px;}
+.fz_44{font-size: 44px;}
+.fz_46{font-size: 46px;}
+.fz_48{font-size: 48px;}
+.fz_50{font-size: 50px;}
+
+
+
+@media (min-width: 768px){
+    .navbar-nav>li>a {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+
+
+
+.navbar-default .navbar-toggle{
+	border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background: transparent !important;
+}
+#navbar{
+	background: #fff;
+}
+#navbar .logo{
+	float: left;
+}
+#navbar .logo img{
+	display: block;
+	height: 60px;
+	margin-left: 15px;
+}
+
+
+#footer_nav{
+	width: 100%;
+	background: #000;
+	text-align: center;
+}
+#footer_nav p{
+	color: #666;
+	font-size: 14px;
+	padding: 20px 0;
+	margin: 0;
+}
